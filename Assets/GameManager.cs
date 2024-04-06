@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool _isPlaying = false;
     public static GameManager instance;
 
-    void Start()
+    void Awake()
     {
         instance = this;
         _isPlaying = false;
