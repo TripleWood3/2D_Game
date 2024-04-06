@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class CreatureSpawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     [SerializeField] private int _index;
     [SerializeField] private int _number;
@@ -27,7 +27,7 @@ public class CreatureSpawner : MonoBehaviour
     public void Spawn(int index)
     {
     
-        var p = CreatureDataBase.instance.Pools[index];
+        var p = SpawnDataBase.instance.Pools[index];
         var c = p.Get();
         c.SetPool(p);
         c.Activate(transform.position);
