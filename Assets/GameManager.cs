@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private bool _isPlaying = false;
     public static GameManager instance;
 
     void Awake()
     {
         instance = this;
-        _isPlaying = false;
     }
 
     void Update()
@@ -20,6 +18,5 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        _isPlaying = true;
     }
 }
